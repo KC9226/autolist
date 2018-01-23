@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <thead id="thead">
+
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+
+<script src="/static/jquery-1.12.4.js"></script>
+<script src="/static/nb-list.js"></script>
+<script>
+    $(function () {
+        $.linan('/server-json.html');
+    })
+
+    /*  $(function () {
+          init();
+      });
+    */
+    /*
+    function init() {
+        // 获取要显示的列
+        // 获取数据
+        $.ajax({
+            url:'server-json.html',
+            type:'GET',
+            dataType:'JSON',
+            success:function (arg) {
+                if(arg.status){
+                    // 创建表格标题
+                    createTablehead(arg.data.table_config);
+                    createTablebody(arg.data.table_config, arg.data.data_list);
+                }else{
+                    alert(arg.message)
+                }
+            }
+        })
+    }
+    */
+
+    //function createTablehead(config) {
+    /*
+    [
+        {
+            'q': 'id',
+            'title': '主机名',
+            'display': 0,
+            'text': {},
+            'attr': {}
+        },
+        {
+            'q': 'hostname',
+            'title': '主机名',
+            'display': 1,
+            'text': {'content': '{m}', 'kwargs': {'m': '@hostname'}},
+            'attr': {'orginal': '@hostname', 'k2': 'v2'}
+        },
+        # '{n}-{m}'.format({'n': 'hostname','m':'@hostname'}) => hostname-c1.com
+        {
+            'q': 'port',
+            'title': '端口',
+            'display': 1,
+            'text': {'content': '{m}', 'kwargs': {'m': '@port'}},
+            'attr': {'k1': '@port', 'k2': 'v2'}
+        },
+        {
+            'q': 'business_unit_id',
+            'title': '业务线ID',
+            'display': 1,
+            # 去全局变量business_unit_list = [
+            #      {id:1,name:'WEB'},
+            #      {id:2,name:'存储'},
+            #      {id:3,name:'商城'},
+            # ]
+            'text': {'content': '{m}', 'kwargs': {'m': '@business_unit_id'}},
+            # 'text': {'content': '{m}', 'kwargs': {'m': '@@business_unit_list'}},
+            'attr': {'k1': '@business_unit_id', 'k2': 'v2'}
+            # 'attr': {'k1': 'v1', 'k2': 'v2'}
+        },
+        {
+            'q': 'business_unit__name',
+            'title': '业务线名称',
+            'display': 1,
+            'text': {'content': '{key}-{m}',
+                     'kwargs': {'key': '@business_unit_id', 'm': '@business_unit__name'}},
+            'attr': {'k1': '@business_unit__name', 'k2': 'v2'}
+        },
+        {
+            'q': None,
+            'title': '操作',
+            'display': 1,
+            'text': {'content': '<a href="/server-detail-{m}.html">查看详细</a>', 'kwargs': {'m': '@id'}},
+            'attr': {'k1': '@id', 'k2': 'v2'}
+        }
+    ]  */
+
+    //console.log(config);
+    //var tr = document.createElement('tr');
+    //$.each(config, function (k,v) {
+    //    if(v.display){
+    //        var th = document.createElement('th');
+    //        th.innerHTML = v.title;
+    //       $(tr).append(th);
+    //    }
+    // });
+    //$('#thead').append(tr);
+    //}
+
+    //function createTablebody(tableConfig, dataList) {
+    /*
+    dataList = [{'port:11, 'hostname':'c1.com'}, {'port':23, 'hostname':'c2.com'}]
+    tableConfig =[
+        {
+            'q': 'id',
+            'title': '主机名',
+            'display': 0,
+            'text': {},
+            'attr': {}
+        },
+        {
+            'q': 'hostname',
+            'title': '主机名',
+            'display': 1,
+            'text': {'content': '{m}', 'kwargs': {'m': '@hostname'}},
+            'attr': {'orginal': '@hostname', 'k2': 'v2'}
+        },
+
+    ]   */
+    //   $.each(dataList, function(k1, row) {
+    // row = {'port:11, 'hostname':'c1.com'}
+    //       var tr = document.createElement('tr');
+    //       $.each(tableConfig, function(k2, configItem) {
+    /*
+    configItem = {
+        'q': 'id',
+        'title': '主机名',
+        'display': 0,
+        'text': {},
+        'attr': {}
+    }
+    */
+    //           var td = document.createElement('td');
+    //           td.innerHTML = row[configItem.q];
+    //           $(tr).append(td);
+    //       })
+    //   });
+    //   $('#tbody').append(tr);
+    //}
+
+</script>
+</body>
+</html>
